@@ -67,10 +67,10 @@
     'body': 'podspec :path => \'${1:podspecPath}\'\n'
   'target \'targetName\' do … end':
     'prefix': 'target'
-    'body': 'target \'targetName\' do \n$0\nend\n'
+    'body': 'target \'${1:targetName}\' do \n$0\nend\n'
   'abstract_target \'targetName\' do … end':
     'prefix': 'abstract_target'
-    'body': 'abstract_target \'targetName\' do \n$0\nend\n'
+    'body': 'abstract_target \'${1:targetName}\' do \n$0\nend\n'
   'inherit! :search_paths':
     'prefix': 'inheritSearchPaths'
     'body': 'inherit! :search_paths\n'
