@@ -1,7 +1,7 @@
 {
   "name": "cocoa-pods-ruby-snippets",
   "main": "./snippets",
-  "version": "0.9.0",
+  "version": "0.10.0",
   "description": "A snippet package for Atom to set .podspec or .podfile files for cocoaPods.",
   "repository": "https://github.com/KKLater/cocoaPodsRubySnippets.git",
   "license": "MIT",
