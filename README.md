@@ -10,4 +10,4 @@ Atom Package: <https://atom.io/packages/cocoa-pods-ruby-snippets>
 
 ## License
 
-[MIT](https://github.com/KKLater/cocoaPodsRubySnippets/blob/master/LICENSE.md) © [KKLater](https://github.com/KKLater)
+[MIT](https://github.com/KKLater/cocoaPodsRubySnippets/blob/master/LICENSE) © [KKLater](https://github.com/KKLater)

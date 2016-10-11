@@ -5,3 +5,117 @@
   'cocoapods':
     'prefix': 'cocoapods'
     'body': '\'cocoapods\',\n'
+  ':clean  => true':
+    'prefix': 'cleanTrue'
+    'body': ':clean => true,\n'
+  ':clean  => falseOrTrue':
+    'prefix': 'clean'
+    'body': ':clean => ${1:falseOrTrue},\n'
+  ':deduplicate_targets  => falseOrTrue':
+    'prefix': 'deduplicate_targets'
+    'body': ':deduplicate_targets => ${1:falseOrTrue},\n'
+  ':deterministic_uuids  => falseOrTrue':
+    'prefix': 'deterministic_uuids'
+    'body': ':deterministic_uuids => ${1:falseOrTrue},\n'
+  ':integrate_targets  => falseOrTrue':
+    'prefix': 'integrate_targets'
+    'body': ':integrate_targets => ${1:falseOrTrue},\n'
+  ':lock_pod_sources  => falseOrTrue':
+    'prefix': 'lock_pod_sources'
+    'body': ':lock_pod_sources => ${1:falseOrTrue},\n'
+  ':share_schemes_for_development_pods  => falseOrTrue':
+    'prefix': 'share_schemes_for_development_pods'
+    'body': ':share_schemes_for_development_pods => ${1:falseOrTrue},\n'
+  'pod \'Objection\'':
+    'prefix': 'pod'
+    'body': 'pod \'${1:Objection}\'\n'
+  'pod \'Objection\', \'version\'':
+    'prefix': 'podVersion'
+    'body': 'pod \'${1:Objection}\', \'${2:version}\'\n'
+  'pod \'Objection\', :configuration => \'config\'':
+    'prefix': 'podConfig'
+    'body': 'pod \'${1:Objection}\', :configuration => \'${2:config}\'\n'
+  'pod \'Objection\', :configurations => [\'config\', \'...\']':
+    'prefix': 'podConfigs'
+    'body': 'pod \'${1:Objection}\', :configurations => [\'${2:config}\', \'${3:...}\']\n'
+  'pod \'Objection\', :subspecs => [\'subspecs\',\'...\']':
+    'prefix': 'podSubspecs'
+    'body': 'pod \'${1:Objection}\', :subspecs => [\'${2:subspecs}\', \'${3:...}\']\n'
+  'pod \'Objection\', :path => \'path\'':
+    'prefix': 'podPath'
+    'body': 'pod \'${1:Objection}\', :path => \'${2:path}\'\n'
+  'pod \'Objection\', :git => \'git\'':
+    'prefix': 'podGit'
+    'body': 'pod \'${1:Objection}\', :git => \'${2:git}\'\n'
+  'pod \'Objection\', :git => \'git\', :branch => \'branch\'':
+    'prefix': 'podGitBranch'
+    'body': 'pod \'${1:Objection}\', :git => \'${2:git}\', :branch => \'${3:branch}\'\n'
+  'pod \'Objection\', :git => \'git\', :tag => \'tag\'':
+    'prefix': 'podGitTag'
+    'body': 'pod \'${1:Objection}\', :git => \'${2:git}\', :tag => \'${3:tag}\'\n'
+  'pod \'Objection\', :git => \'git\', :commit => \'commit\'':
+    'prefix': 'podGitCommit'
+    'body': 'pod \'${1:Objection}\', :git => \'${2:git}\', :commit => \'${3:commit}\'\n'
+  'pod \'Objection\', podspec':
+    'prefix': 'podPodspec'
+    'body': 'pod \'${1:Objection}\', ${2:podspec}\n'
+  'podspec :name => \'podspecName\'':
+    'prefix': 'podspecName'
+    'body': 'podspec :name => \'${1:podspecName}\'\n'
+  'podspec :path => \'podspecPath\'':
+    'prefix': 'podspecPath'
+    'body': 'podspec :path => \'${1:podspecPath}\'\n'
+  'target \'targetName\' do … end':
+    'prefix': 'target'
+    'body': 'target \'targetName\' do \n$0\nend\n'
+  'abstract_target \'targetName\' do … end':
+    'prefix': 'abstract_target'
+    'body': 'abstract_target \'targetName\' do \n$0\nend\n'
+  'inherit! :search_paths':
+    'prefix': 'inheritSearchPaths'
+    'body': 'inherit! :search_paths\n'
+  'inherit! :complete':
+    'prefix': 'inheritComplete'
+    'body': 'inherit! :complete\n'
+  'inherit! :none':
+    'prefix': 'inheritNone'
+    'body': 'inherit! :none\n'
+  'project \'projectName\'':
+    'prefix': 'project'
+    'body': 'project \'${1:projectName}\'\n'
+  'project \'projectName\', \'releaseLinkpath\' => :release, \'debugLinkPath\' => :debug':
+    'prefix': 'projectReaseDebugLinkPath'
+    'body': 'project \'${1:projectName}\', \'${2:releaseLinkpath}\' => :release, \'${3:debugLinkPath}\' => debug\n'
+  'inhibit_all_warnings!':
+    'prefix': 'inhibit_all_warnings'
+    'body': 'inhibit_all_warnings!\n'
+  ':inhibit_warnings => true':
+    'prefix': 'inhibit_warningsTrue'
+    'body': ':inhibit_warnings => true\n'
+  ':inhibit_warnings => false':
+    'prefix': 'inhibit_warningsFalse'
+    'body': ':inhibit_warnings => false\n'
+  'use_frameworks!':
+    'prefix': 'use_frameworks'
+    'body': 'use_frameworks!\n'
+  'workspace \'workspaceName\'':
+    'prefix': 'workspace'
+    'body': 'workspace \'${1:workspaceName}\'\n'
+  'generate_bridge_support!':
+    'prefix': 'generate_bridge_support'
+    'body': 'generate_bridge_support!\n'
+  'set_arc_compatibility_flag!':
+    'prefix': 'set_arc_compatibility_flag'
+    'body': 'set_arc_compatibility_flag!\n'
+  'source \'source\'':
+    'prefix': 'source'
+    'body': 'source \'${1:source}\'\n'
+  'plugin \'plugin\'':
+    'prefix': 'plugin'
+    'body': 'plugin \'${1:plugin}\'\n'
+  'pre_install  do |installer|… end':
+    'prefix': 'pre_install'
+    'body': 'pre_install do |${1:installer}|\n$0\nend\n'
+  'post_install  do |installer|… end':
+    'prefix': 'post_install'
+    'body': 'post_install do |${1:installer}|\n$0\nend\n'
