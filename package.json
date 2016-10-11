@@ -1,7 +1,7 @@
 {
   "name": "cocoa-pods-ruby-snippets",
   "main": "./lib/main",
-  "version": "0.3.1",
+  "version": "0.4.0",
   "description": "Ruby snippets for cocoaPodsSpec files",
   "repository": "https://github.com/KKLater/cocoaPodsRubySnippets.git",
   "license": "MIT",
