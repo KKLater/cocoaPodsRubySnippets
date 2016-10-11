@@ -1,0 +1,7 @@
+'.source.ruby':
+  'install!':
+    'prefix': 'install'
+    'body': 'install! '
+  'cocoapods':
+    'prefix': 'cocoapods'
+    'body': '\'cocoapods\',\n'
