@@ -9,7 +9,7 @@
     "atom",
     ".podspec",
     ".podfile",
-    "cocoaPods"
+    "cocoaPods",
     "language",
     "ruby"
   ],
