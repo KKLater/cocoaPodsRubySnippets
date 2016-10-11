@@ -1,12 +1,12 @@
 {
-    "name": "cocoa-pods-ruby-snippets",
-    "main": "./lib/main",
-    "version": "0.0.1",
-    "description": "Ruby snippets for cocoaPodsSpec files",
-    "repository": "https://github.com/KKLater/cocoaPodsRubySnippets.git",
-    "license": "MIT",
-    "engines": {
-      "atom": ">=1.0.0 <2.0.0"
-    },
-    "dependencies": {}
+  "name": "cocoa-pods-ruby-snippets",
+  "main": "./lib/main",
+  "version": "0.1.0",
+  "description": "Ruby snippets for cocoaPodsSpec files",
+  "repository": "https://github.com/KKLater/cocoaPodsRubySnippets.git",
+  "license": "MIT",
+  "engines": {
+    "atom": ">=1.0.0 <2.0.0"
+  },
+  "dependencies": {}
 }
