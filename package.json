@@ -1,20 +1,12 @@
 {
     "name": "cocoa-pods-ruby-snippets",
-    "main": "./lib/cocoa-pods-ruby-snippets",
+    "main": "./lib/main",
     "version": "0.0.1",
     "description": "Ruby snippets for cocoaPodsSpec files",
-    "repository": "https://github.com/atom/cocoa-pods-ruby-snippets",
+    "repository": "https://github.com/KKLater/cocoaPodsRubySnippets.git",
     "license": "MIT",
     "engines": {
-        "atom": ">=1.0.0 <2.0.0"
+      "atom": ">=1.0.0 <2.0.0"
     },
-    "dependencies": {},
-    "devDependencies": {
-        "grunt": "0.4.2",
-        "grunt-cli": "0.1.11",
-        "grunt-lintspaces": "0.3.1"
-    },
-    "scripts": {
-        "test": "grunt"
-    }
+    "dependencies": {}
 }
