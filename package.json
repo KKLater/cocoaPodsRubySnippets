@@ -1,10 +1,16 @@
 {
   "name": "cocoa-pods-ruby-snippets",
   "main": "./lib/main",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "Ruby snippets for cocoaPodsSpec files",
   "repository": "https://github.com/KKLater/cocoaPodsRubySnippets.git",
   "license": "MIT",
+  "keywords": [
+    "atom",
+    "language",
+    "ruby",
+    ".podspec"
+  ],
   "engines": {
     "atom": ">=1.0.0 <2.0.0"
   },
