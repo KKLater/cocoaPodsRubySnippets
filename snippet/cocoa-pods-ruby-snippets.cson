@@ -1,0 +1,228 @@
+'.source.ruby':
+    'Pod :: Spec.new do |variable| … end':
+        'prefix': 'PodSpecNew'
+        'body': 'Pod :: Spec.new do |${1:variable}|\n\t$0\nend'
+    'name = \'name\'':
+        'prefix': 'name'
+        'body': 'name = \'${1:name}\'\n'
+    'version = \'version\'':
+        'prefix': 'version'
+        'body': 'version = \'${1:version}\'\n'
+    'cocoapods_version = \'cocoapods_version\'':
+        'prefix': 'cocoapods_version'
+        'body': 'cocoapods_version = \'${1:cocoapods_version}\'\n'
+    'authors = \'authors\'':
+        'prefix': 'authors'
+        'body': 'authors = \'${1:authors}\'\n'
+    'authors = {\'authorsName\ => \'authorsEmail\'}':
+        'prefix': 'authorsWithEmail'
+        'body': 'authors = {\'${1:authorsName}\ => \'${2:authorsEmail}\'}\n'
+    '\'authorsName\ => \'authorsEmail\'':
+        'prefix': 'authorsEmail'
+        'body': '\'${1:authorsName}\ => \'${2:authorsEmail}\'\n'
+    'social_media_url = \'social_media_url\'':
+        'prefix': 'social_media_url'
+        'body': 'social_media_url = \'${1:social_media_url}\'\n'
+    'license = \'license\'':
+        'prefix': 'license'
+        'body': 'license = \'${1:license}\'\n'
+    'license = { :type => \'licenseType\', :file => \'licenseFile\'}':
+        'prefix': 'licenseTypeFile'
+        'body': 'license = { :type => \'${1:licenseType}\', :file => \'${2:licenseFile}\'}\n'
+    'license = { :type => \'licenseType\', :text => <<-LICENSE licenseText LICENSE}':
+        'prefix': 'licenseTypeText'
+        'body': 'license = { :type => \'${1:licenseType}\', :text => <<-LICENSE\n${2:licenseText}\nLICENSE\n}\n'
+    'homepage = \'homepage\'':
+        'prefix': 'homepage'
+        'body': 'homepage = \'${1:homepage}\'\n'
+    'source = { :git => \'gitPath\', :tag => \'gitTag\'}':
+        'prefix': 'sourceGitTag'
+        'body': 'source = { :git => \'${1:gitPath}\', :tag => \'${2:gitTag}\'}\n'
+    'source = { :git => \'gitPath\', :tag => \'gitTag\', :branch => \'gitBranch\', :commit => \'gitCommit\', :submodules => \'gitSubmodules\'}':
+        'prefix': 'sourceGit'
+        'body': 'source = { :git => \'${1:gitPath}\',\n             :tag => \'${2:gitTag}\',\n             :branch => \'${3:gitBranch}\',\n             :commit => \'${4:gitCommit}\',\n             :submodules => \'${5:gitSubmodules}\'}\n'
+    'source = { :svn => \'svnPath\', :folder => \'svnFolder\', :tag => \'svnTag\', :revision => \'svnRevision\'}':
+        'prefix': 'sourceSVN'
+        'body': 'source = { :svn => \'${1:svnPath}\',\n             :folder => \'${2:svnFolder}\',\n             :tag => \'${3:svnTag}\',\n             :revision => \'${4:svnRevision}\'}\n'
+    'source = { :hg => \'hgPath\', :revision => \'hgRevision\'}':
+        'prefix': 'sourceHG'
+        'body': 'source = { :hg => \'${1:hgPath}\',\n             :revision => \'${2:hgRevision}\'}\n'
+    'source = { :http => \'httpPath\', :flatten => \'httpFlatten\', :type => \'httpType\', :sha256 => \'httpSha256\', :sha1 => \'httpSha1\'}':
+        'prefix': 'sourceHTTP'
+        'body': 'source = { :http => \'${1:httpPath}\',\n             :flatten => \'${2:httpFlatten}\',\n             :type => \'${3:httpType}\',\n             :sha256 => \'${4:httpSha256}\',\n             :sha1 => \'${5:httpSha1}\'}\n'
+    'source = :path => \'path\'':
+        'prefix': 'sourcePath'
+        'body': 'source = :path => \'${1:path}\'\n'
+    'summary = \'summary\'':
+        'prefix': 'summary'
+        'body': 'summary = \'${1:summary}\'\n'
+    'description = <<-DESC description DESC':
+        'prefix': 'description'
+        'body': 'summary = <<-DESC \n${1:description}\n DESC\n'
+    'screenshot = \'screenshot\'':
+        'prefix': 'screenshot'
+        'body': 'screenshot = \'${1:screenshot}\'\n'
+    'screenshots = [\'screenshot\', \'...\']':
+        'prefix': 'screenshots'
+        'body': 'screenshots = [ \'${1:screenshot}\',\n                 \'${2:...}\' ]\n'
+    'documentation_url = \'documentation_url\'':
+        'prefix': 'documentation_url'
+        'body': 'documentation_url = \'${1:documentation_url}\'\n'
+    'prepare_command = \'prepare_command\'':
+        'prefix': 'prepare_command'
+        'body': 'prepare_command = \'${1:prepare_command}\'\n'
+    #  prepare_command more is lack
+    # 'prepare_command = <<CMD sed -i \'path1\'':
+    #     'prefix': 'prepare_commandCMD'
+    #     'body': 'prepare_command = \'${1:prepare_command}\'\n'
+    'deprecated = true':
+        'prefix': 'deprecatedTrue'
+        'body': 'deprecated = true\n'
+    'deprecated = false':
+        'prefix': 'deprecatedFalse'
+        'body': 'deprecated = false\n'
+    'deprecated_in_favor_of = \'deprecated_in_favor_of\'':
+        'prefix': 'deprecated_in_favor_of'
+        'body': 'deprecated_in_favor_of = \'${1:deprecated_in_favor_of}\'\n'
+    'ios':
+        'prefix': 'ios'
+        'body': 'ios'
+    'platform = :ios':
+        'prefix': 'platformIOS'
+        'body': 'platform = :ios\n'
+    'platform = :ios, \'version\'':
+        'prefix': 'platformIOSVersion'
+        'body': 'platform = :ios, \'${1:version}\'\n'
+    'osx':
+        'prefix': 'osx'
+        'body': 'osx'
+    'platform = :osx':
+        'prefix': 'platformIOS'
+        'body': 'platform = :osx\n'
+    'platform = :osx, \'version\'':
+        'prefix': 'platformOSXVersion'
+        'body': 'platform = :osx, \'${1:version}\'\n'
+    'tvos':
+        'prefix': 'tvos'
+        'body': 'tvos'
+    'platform = :tvos':
+        'prefix': 'platformTVOS'
+        'body': 'platform = :tvos\n'
+    'platform = :tvos, \'version\'':
+        'prefix': 'platformTVOSVersion'
+        'body': 'platform = :tvos, \'${1:version}\'\n'
+    'watchos':
+        'prefix': 'watchos'
+        'body': 'watchos'
+    'platform = :watchos':
+        'prefix': 'platformWATCHOS'
+        'body': 'platform = :watchos\n'
+    'platform = :watchos, \'version\'':
+        'prefix': 'platformWATCHOSVersion'
+        'body': 'platform = :watchos, \'${1:version}\'\n'
+    'deployment_target = \'target\'':
+        'prefix': 'deployment_target'
+        'body': 'deployment_target = \'${1:target}\'\n'
+    'dependency \'dependency\'':
+        'prefix': 'dependency'
+        'body': 'dependency \'${1:dependency}\'\n'
+    'dependency \'dependency\', \'~> version\'':
+        'prefix': 'dependencyVersion'
+        'body': 'dependency \'${1:dependency}\', \'~> ${2:version}\'\n'
+    'requires_arc = true':
+        'prefix': 'requiresArcTrue'
+        'body': 'requires_arc = true\n'
+    'requires_arc = false':
+        'prefix': 'requiresArcFalse'
+        'body': 'requires_arc = false\n'
+    'requires_arc = \'class\'':
+        'prefix': 'requiresArcClass'
+        'body': 'requires_arc = \'${1:class}\'\n'
+    'requires_arc = [\'class\',\'...\']':
+        'prefix': 'requiresArcClasses'
+        'body': 'requires_arc = [\'${1:class}\',\'${2:...}\']\n'
+    'framework = \'framework\'':
+        'prefix': 'framework'
+        'body': 'framework = \'${1:framework}\'\n'
+    'frameworks = \'framework\', \'...\'':
+        'prefix': 'frameworks'
+        'body': 'frameworks = \'${1:framework}\', \'${2:...}\'\n'
+    'weak_framework = \'weak_framework\'':
+        'prefix': 'weak_framework'
+        'body': 'weak_framework = \'${1:weak_framework}\'\n'
+    'library = \'library\'':
+        'prefix': 'library'
+        'body': 'library = \'${1:library}\'\n'
+    'libraries = \'librarie\', \'...\'':
+        'prefix': 'libraries'
+        'body': 'libraries = \'${1:librarie}\', \'${2:...}\'\n'
+    'compiler_flags = \'compiler_flag\', \'...\'':
+        'prefix': 'compiler_flags'
+        'body': 'compiler_flags = \'${1:compiler_flag}\',  \'${2:...}\'\n'
+        'body': 'weak_framework = \'${1:weak_framework}\'\n'
+    'pod_target_xcconfig = {\'target\' => \'config\'}':
+        'prefix': 'pod_target_xcconfig'
+        'body': 'pod_target_xcconfig = {\'${1:target}\' => \'${2:config}\'}\n'
+    'user_target_xcconfig = {\'target\' => \'config\'}':
+        'prefix': 'user_target_xcconfig'
+        'body': 'user_target_xcconfig = {\'${1:target}\' => \'${2:config}\'}\n'
+    'prefix_header_contents = \'prefix_header_contents\', \'...\'':
+        'prefix': 'prefix_header_contents'
+        'body': 'prefix_header_contents = \'${1:prefix_header_contents}\', \'${2:...}\'\n'
+    'prefix_header_file = \'prefix_header_file\'':
+        'prefix': 'prefix_header_file'
+        'body': 'prefix_header_file = \'${1:prefix_header_file}\'\n'
+    'module_name = \'module_name\'':
+        'prefix': 'module_name'
+        'body': 'module_name = \'${1:module_name}\'\n'
+    'header_dir = \'header_dir\'':
+        'prefix': 'header_dir'
+        'body': 'header_dir = \'${1:header_dir}\'\n'
+    'header_mappings_dir = \'header_mappings_dir\'':
+        'prefix': 'header_mappings_dir'
+        'body': 'header_mappings_dir = \'${1:header_mappings_dir}\'\n'
+    'source_files = \'source_files\', \'...\'':
+        'prefix': 'source_files'
+        'body': 'source_files = \'${1:source_files}\', \'${2:...}\'\n'
+    'public_header_files = \'public_header_files\'':
+        'prefix': 'public_header_files'
+        'body': 'public_header_files = \'${1:public_header_files}\'\n'
+    'private_header_files = \'private_header_files\'':
+        'prefix': 'private_header_files'
+        'body': 'private_header_files = \'${1:private_header_files}\'\n'
+    'vendored_frameworks = \'vendored_frameworks\', \'...\'':
+        'prefix': 'vendored_frameworks'
+        'body': 'vendored_frameworks = \'${1:vendored_frameworks}\', \'${2:...}\'\n'
+    'vendored_libraries = \'vendored_libraries\', \'...\'':
+        'prefix': 'vendored_libraries'
+        'body': 'vendored_libraries = \'${1:vendored_libraries}\', \'${2:...}\'\n'
+    'resource_bundle = {\'bundleName\' => \'bundleFilePath\'':
+        'prefix': 'resource_bundle'
+        'body': 'resource_bundle = { \'${1:bundleName}\' => \'${2:bundleFilePath}\' }\n'
+    'resource_bundles = {\'bundleName\' => [\'bundleFilePath\'], \'...\' => [\'...\']}':
+        'prefix': 'resource_bundles'
+        'body': 'resource_bundles = {\n    \'${1:bundleName}\' => [\'${2:bundleFilePath}\'],\n    \'${3:...}\' => [\'${4:...}\']\n}\n'
+    'resource = \'resource\'':
+        'prefix': 'resource'
+        'body': 'resource = \'${1:resource}\'\n'
+    'resources = [\'resources\', \'...\']':
+        'prefix': 'resources'
+        'body': 'resources = [\'${1:resources}\', \'${2:...}\']\n'
+    'exclude_files = \'exclude_files\'':
+        'prefix': 'exclude_files'
+        'body': 'exclude_files = \'${1:exclude_files}\'\n'
+    'preserve_path = \'preserve_path\'':
+        'prefix': 'preserve_path'
+        'body': 'preserve_path = \'${1:preserve_path}\'\n'
+    'module_map = \'module_map\'':
+        'prefix': 'module_map'
+        'body': 'module_map = \'${1:module_map}\'\n'
+    'subspec \'subspecFolderName\' do |subspecName| … end':
+        'prefix': 'subspec'
+        'body': 'subspec \'${1:subspecFolderName}\' do |${2:subspecName}|\n\t$0\nend'
+    'default_subspec = \'default_subspec\'':
+        'prefix': 'default_subspec'
+        'body': 'default_subspec = \'${1:default_subspec}\'\n'
+    'default_subspecs = \'default_subspecs\', \'...\'':
+        'prefix': 'default_subspecs'
+        'body': 'default_subspecs = \'${1:default_subspecs}\', \'${2...}\'\n'
